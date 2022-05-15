@@ -19,7 +19,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(--anthor-white);
+    background: var(--anthor-gray-secondary);
     color: var(--anthor-gray-primary);
     -webkit-font-smoothing: antialiased;
   }
