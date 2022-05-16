@@ -29,17 +29,16 @@ export const Content = styled.div`
 export const MenuLink = styled.button<MenuLinkProps>`
   display: inline-block;
   position: relative;
-  padding: 0 8px;
-  width: 160px;
+  padding: 0 20px;
+  width: fit-content;
   height: 40px;
   cursor: pointer;
 
   background: #ffffff;
+  color: var(--anthor-blue-primary);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   border-radius: 4px;
-  color: var(${props => (props.active ? '--white' : '--gray-300')});
-  font-weight: ${props => (props.active ? 'bold' : 'normal')};
 
   transition: color 0.2s;
 
