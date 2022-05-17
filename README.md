@@ -1,99 +1,124 @@
-# MobileFlix
+<h1 align='center'>MovieFlix's</h1>
 
-📽 A simple typescript crud like movie app!
+<div align="center">
 
-# Sobre
+[![CodeQLCI](https://github.com/AlvaroIsrael/ignews-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AlvaroIsrael/ignews-app/actions/workflows/codeql-analysis.yml)
+[![GitHub license](https://img.shields.io/github/license/AlvaroIsrael/ignews-app)](https://img.shields.io/github/license/AlvaroIsrael/ignews-app)
+[![GitHub repo size](https://img.shields.io/github/repo-size/AlvaroIsrael/ignews-app)](https://img.shields.io/github/repo-size/AlvaroIsrael/ignews-app)
+[![GitHub stars](https://img.shields.io/github/stars/AlvaroIsrael/ignews-app)](https://img.shields.io/github/stars/AlvaroIsrael/ignews-app)
+[![GitHub forks](https://img.shields.io/github/forks/AlvaroIsrael/ignews-app)](https://img.shields.io/github/forks/AlvaroIsrael/ignews-app)
+[![GitHub issues](https://img.shields.io/github/issues/AlvaroIsrael/ignews-app)](https://img.shields.io/github/issues/AlvaroIsrael/ignews-app)
+[![GitHub contributors](https://img.shields.io/github/contributors/AlvaroIsrael/ignews-app)](https://img.shields.io/github/contributors/AlvaroIsrael/ignews-app)
+[![GitHub last commit](https://img.shields.io/github/last-commit/AlvaroIsrael/ignews-app)](https://img.shields.io/github/last-commit/AlvaroIsrael/ignews-app)
 
-Obrigado pelo seu interesse em participar do nosso processo seletivo. No seu e-mail você deve ter recebido qual trilha
-deve executar para seu teste: o de backend ou mobile (não é necessário fazer os dois, apenas o da sua trilha).
+> 📽 A simple typescript crud like movie app!
 
-O MobileFlix(:tm:) é uma aplicação revolucionária para compartilhar com seus amigos os filmes que você viu e suas
-avaliações. Você pode cadastrar os filmes que assistiu, avaliá-los e comentar as avaliações de seus amigos. Abaixo estão
-as instruções para cada trilha:
+<p>
+  <a href="#-technologies-used">Technologies Used</a> •
+  <a href="#-how-to-use">How To Use</a> •
+  <a href="#-contributing">Contributing</a> •
+  <a href="#-license">License</a>
+</p>
 
-## Teste Frontend/Fullstack (NodeJs, React)
+<br/>
 
-Você deve construir uma aplicação web utilizando React para compartilhar suas opiniões sobre filmes. Seu aplicativo deve
-ter as seguintes funcionalidades:
+<p>Made with ❤️ by Alvaro Israel 👏🏻 <a href="https://www.linkedin.com/in/alvaroisraeldesenvolvedor/">Get in Touch!</a></p>
+<p>Hit the ⭐️ button if you like this project!</p>
 
-**Requisitos:**
+</div>
 
-- Criar, editar e remover filmes (o famoso CRUD)
-- Listar os detalhes de um filme: diretor, elenco, ano, gênero, etc
-- Avaliar filmes: fique a vontade para escolher o sistema de avaliação que quiser (estrelas, joinha, emojis, etc)
-- Comentar na avaliação de filmes: o que seria a internet sem comentários de pessoas aleatórias?
-- Teste unitário
+<br/>
 
-**Opcionais:**
+## 🏆 Technologies Used
 
-- Seria legal se sua aplicação também fizesse o cadastro e login de usuários
-- Teste de integração
-- Integração com a API do OMDB ou TheMovieDB
+- [Node.js](https://nodejs.org/en/) and [NPM](http://npmjs.com)
+- [React](https://github.com/facebook/react/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
+- [Jest](https://jestjs.io/)
 
-**Backend:**
+## 💻 How to Use
 
-Se você se candidatou para uma vaga de frontend **não precisa usar um backend**, mas seu aplicativo **deve** se
-comportar como se existisse um. Se optar por não usar um backend, seu aplicativo deve persistir os dados locais.
+### **Install system dependencies**
 
-Para candidatos fullstack, **você deve fazer um backend** que atenda as necessidades do frontend. De forma opcional,
-você pode seguir a especificação para o teste de backend.
+- Install [Git](https://git-scm.com).
+- Install [Node.js](https://nodejs.org/en/download/), v17.9.0 recommended.
 
-**Você será avaliado por:**
+### **Clone**
 
-- Qualidade das features entregues. Se não conseguir fazer tudo, dê preferência por entregar poucas funcionalidades,
-  desde que sejam entregues com qualidade
-- Estrutura do seu projeto
-- Qualidade do código e padrões utilizados (Solid, Dry, etc)
-- Testes escritos
+In your command line:
 
----
+```bash
+$ git clone https://github.com/AlvaroIsrael/movieflix-app.git
+$ cd movieflix-app
+```
 
-## Teste Backend (NodeJS)
+### **Frontend**
 
-Você deve construir uma API Restful (preferencialmente usando NodeJS) para avaliação de filmes.
+```bash
+# Go into project folder
+$ cd movieflix-frontend
 
-**Requisitos:**
+# Install dependencies
+$ yarn install
 
-Sua API deve estar dividida nos domínios significativos para o funcionamento do sistema e deve ter as seguintes
-funcionalidades:
+# Run the app
+$ yarn start
+```
 
-- CRUD de filmes
-- Cadastro de usuários
-- Usuários podem marcar filmes que já assistiram
-- Usuários podem avaliar filmes
-    - Fique a vontade para escolher o sistema de avaliação que quiser (estrelas, joinha, emojis, etc)
-    - A avaliação de um filme é calculada pela média de avaliações dos usuários. O cálculo da avaliação de um filme deve
-      ser feito de forma assíncrona
-- Usuários podem comentar nas avaliações de outros usuários
-- Sua API deve se comunicar com algum banco de dados (MongoDB, Postgres, Cassandra, etc)
-- Testes unitários (mire em 70% de cobertura)
+### **Backend**
 
-**Opcionais:**
+See [How to Run](/movieflix-backend/README.md#-how-to-run) inside the `movieflix-backend` project folder for more details.
 
-- Use docker-compose
-- Teste de integração
-- Integração com a API do OMDB ou TheMovieDB
-- Typescript
-- GraphQL
-- Autenticação de usuários
+```bash
+# Go into backend folder
+$ cd movieflix-backend
 
-**Você será avaliado por:**
+# Install dependencies
+$ yarn install
 
-1. Qualidade das features entregues. Se não conseguir fazer tudo, dê preferência por entregar poucas funcionalidades,
-   desde que sejam entregues com qualidade
-1. Facilidade para rodar o código. Dê preferência para soluções como o `docker-compose` ou outras abstrações que
-   coloquem tudo no ar com apenas um comando
-1. Testes escritos
-1. Modelagem dos domínios e estrutura do seu projeto
-1. Qualidade do código e padrões utilizados (Solid, Dry, etc)
+# Install the mongodb database needed to run this program. See 'How to Run' above for more details.
 
-# Entrega
+# Run the app
+$ yarn dev:server
+```
 
-Você deve enviar o link do seu projeto em um repositório público por email e responder as seguintes informações no
-README do projeto:
+### **TMDB Api**
 
-1. Como rodar o seu projeto
-1. Bugs conhecidos
-1. Como você planejou abordar este projeto? Que tecnologias foram utilizadas?
-1. Você acha algum dos requisitos ou funcionalidades difíceis em algum aspecto? Por quê?
-1. Se você tivesse mais tempo para fazer o projeto o que faria de diferente?
+> This application has a integration process to retrieve movies information from [themoviedb api](https://developers.themoviedb.org/3/getting-started/introduction).
+In order for you to run this app you are going to need to request an api token as developer. Without this token the app will be pretty much useless, as all tmdb requests will fail.
+Once you have the token, you should set it in the appropriate env variable into .env file using the `REACT_APP_TMDB_API_KEY` variable in frontend src folder.
+
+## 🤝 Contributing
+
+Fork this repository - click [fork][].
+
+```bash
+# Create your feature branch:
+$ git checkout -b feature/myAwesomeFeature
+
+# Commit your changes:
+$ git commit -m 'feat: Added some new awesomeFeature'
+
+# Push to the branch:
+$ git push -u origin feature/myAwesomeFeature
+```
+
+Then go to [Pull Requests][] and make a new one.
+
+Resources:
+
+- Read more about commits in [conventional commits][].
+- Read more about how to open a Pull Request from [GitHub official documentation][].
+
+[fork]: https://github.com/AlvaroIsrael/ignews-app/fork
+
+[Pull Requests]: https://github.com/AlvaroIsrael/ignews-app/pulls
+
+[conventional commits]: https://www.conventionalcommits.org/en/v1.0.0/
+
+[GitHub official documentation]: https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+## 📝 License
+
+This software is under MIT license. See [LICENSE](LICENSE.md) for more details.

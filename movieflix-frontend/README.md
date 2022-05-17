@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+<h1 align='center'>MovieFlix's Frontend</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align='center'>
+  <a href='#-show-your-support'>Show your support</a> •
+  <a href='#-contributing'>Contributing</a> •
+  <a href='#-technologies-used'>Technologies Used</a> •
+  <a href='#-license'>License</a>
+</div>
 
-## Available Scripts
+<h4 align='center'>Made with ❤️ by Alvaro Israel 👏🏻 <a href='https://www.linkedin.com/in/alvaroisraeldesenvolvedor/'>
+Get in Touch!</a></h4>
 
-In the project directory, you can run:
+## ⭐️ Show your support
 
-### `yarn start`
+Hit the ⭐️ button if you like this project!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🤝 Contributing
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Fork this repository: https://github.com/AlvaroIsrael/movieflix-app/movieflix-frontend/fork
 
-### `yarn test`
+```bash
+# Create your feature branch:
+$ git checkout -b feature/myAewsomeFeature
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Commit your changes:
+$ git commit -m 'feat: Added some new aewsomeFeature'
 
-### `yarn build`
+# Push to the branch:
+$ git push origin feature/myAewsomeFeature
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Create a new pull request
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Read more about commits in [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+- Read more about how to open a Pull Request from
+  [GitHub official documentation](
+  https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+  ).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏆 Technologies Used
 
-### `yarn eject`
+- [Node](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [JestJs](https://jestjs.io/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🧾 License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This software is under MIT license. See [LICENSE](LICENSE.md) for more details.
