@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
-// import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
+import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
 import MoviesController from '../controllers/MoviesController';
 
 const moviesRouter = Router();
 const moviesController = new MoviesController();
 
-// moviesRouter.use(ensureAuthenticated);
+moviesRouter.use(ensureAuthenticated);
 
 moviesRouter.post('/', celebrate({
   [Segments.BODY]: {
