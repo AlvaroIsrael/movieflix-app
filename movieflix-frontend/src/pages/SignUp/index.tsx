@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { Link, useHistory } from 'react-router-dom';
 import getValidationErrors from '../../utils/getValidationErrors';
 import logoImg from '../../assets/Home/logo.svg';
-import { Container, Content, Background, AnimationContainer } from './styles';
+import { Container, Content, AnimationContainer } from './styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import api from '../../services/appApi';
