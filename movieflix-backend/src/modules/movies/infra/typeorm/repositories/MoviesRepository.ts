@@ -1,4 +1,4 @@
-import { getMongoRepository, MongoRepository, ObjectID } from 'typeorm';
+import { getMongoRepository, MongoRepository, } from 'typeorm';
 
 import Movie from '../schemas/Movie';
 import IMoviesRepository from '@modules/movies/repositories/IMoviesRepository';

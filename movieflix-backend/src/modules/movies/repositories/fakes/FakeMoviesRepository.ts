@@ -2,7 +2,6 @@ import Movie from '@modules/movies/infra/typeorm/schemas/Movie';
 import ICreateMovie from '@modules/movies/dtos/ICreateMovie';
 import IMoviesRepository from '@modules/movies/repositories/IMoviesRepository';
 import IListRequest from '@modules/movies/dtos/IListRequest';
-import { ObjectID, } from 'typeorm';
 import IEditRequest from '@modules/movies/dtos/IEditRequest';
 
 const ObjectId = require('mongodb').ObjectId;

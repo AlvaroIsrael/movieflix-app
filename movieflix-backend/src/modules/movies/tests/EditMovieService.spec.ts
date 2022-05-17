@@ -1,5 +1,4 @@
 import FakeMoviesRepository from '../repositories/fakes/FakeMoviesRepository';
-import ListMoviesService from '../services/ListMoviesService';
 import EditMovieService from '@modules/movies/services/EditMovieService';
 import AppError from '@shared/errors/AppError';
 import { StatusCodes } from 'http-status-codes';
