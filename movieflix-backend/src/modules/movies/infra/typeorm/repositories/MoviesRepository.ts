@@ -4,6 +4,7 @@ import Movie from '../schemas/Movie';
 import IMoviesRepository from '@modules/movies/repositories/IMoviesRepository';
 import ICreateMovie from '@modules/movies/dtos/ICreateMovie';
 import IListRequest from '@modules/movies/dtos/IListRequest';
+import IEditRequest from '@modules/movies/dtos/IEditRequest';
 
 class MoviesRepository implements IMoviesRepository {
   private ormRepository: MongoRepository<Movie>;
@@ -12,7 +13,7 @@ class MoviesRepository implements IMoviesRepository {
     this.ormRepository = getMongoRepository(Movie, 'mongo');
   }
 
-  public async edit(id: string, movie: ICreateMovie): Promise<Movie | undefined> {
+  public async edit(id: string, movie: IEditRequest): Promise<Movie | undefined> {
     await this.ormRepository.update(id, movie);
 
     return this.ormRepository.findOne(id);
