@@ -49,7 +49,9 @@ type MoviesContextState = {
   error: string;
   newMovie: NewMovie;
   addMovie(movie: Movie): Promise<Movie>;
+  editMovie(movie: NewMovie): Promise<NewMovie>;
   listMovies({ page, pageLimit }: IListRequest): Promise<NewMovie[]>;
+  listOneMovie(id: string): Promise<NewMovie>;
   removeMovie(id: string): Promise<void>;
   clearAddMovieError(): void;
 };
@@ -71,6 +73,32 @@ export const MoviesProvider: React.FC = ({ children }: PropsWithChildren<ReactNo
   const clearAddMovieError = useCallback(async () => {
     setHasError(false);
     setError('');
+  }, []);
+
+  const editMovie = useCallback(async (movie: NewMovie): Promise<NewMovie> => {
+    setIsFetching(true);
+    try {
+      const response = await appApi.put(`/v1/movies/${movie.id}`, {
+        ...movie,
+      });
+      return response.data;
+    } catch (e) {
+      return movieInitialState;
+    } finally {
+      setIsFetching(false);
+    }
+  }, []);
+
+  const listOneMovie = useCallback(async (id: string): Promise<NewMovie> => {
+    setIsFetching(true);
+    try {
+      const response = await appApi.get(`/v1/movies/${id}`);
+      return response.data;
+    } catch (e) {
+      return movieInitialState;
+    } finally {
+      setIsFetching(false);
+    }
   }, []);
 
   const listMovies = useCallback(async ({ page, pageLimit }: IListRequest): Promise<NewMovie[]> => {
@@ -136,7 +164,9 @@ export const MoviesProvider: React.FC = ({ children }: PropsWithChildren<ReactNo
         error,
         clearAddMovieError,
         listMovies,
+        listOneMovie,
         removeMovie,
+        editMovie,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { useLocation, useParams, useHistory } from 'react-router-dom';
 import {
   Logo,
@@ -21,7 +21,7 @@ import {
   RemoveButton,
   EditButton,
 } from './styles';
-import { Chart } from '../../components';
+import { EditMovieModal, Chart } from '../../components';
 import { useMovies } from '../../hooks/useMovies';
 
 const MovieDetails: FC = () => {
@@ -37,8 +37,19 @@ const MovieDetails: FC = () => {
     history.push('/');
   }, [history, id, removeMovie]);
 
+  const [show, setShow] = useState(false);
+
+  const handleEditModalShow = useCallback(() => {
+    setShow(true);
+  }, [setShow]);
+
+  const handleEditModalClose = useCallback(() => {
+    setShow(false);
+  }, [setShow]);
+
   return (
     <Container>
+      <EditMovieModal show={show} close={handleEditModalClose} />
       <Header>
         <Logo />
       </Header>
@@ -63,7 +74,7 @@ const MovieDetails: FC = () => {
       </Highlight>
       <Content>
         <RemoveButton onClick={handleRemoveMovie}>Remover filme</RemoveButton>
-        <EditButton>Editar filme</EditButton>
+        <EditButton onClick={handleEditModalShow}>Editar filme</EditButton>
       </Content>
     </Container>
   );

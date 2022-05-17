@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, useCallback } from 'react';
+import React, { FC, HTMLAttributes } from 'react';
 import { Card, Cover, Title, ReleaseDate } from './styles';
 
 type MovieCardProps = HTMLAttributes<HTMLDivElement> & {
@@ -8,13 +8,8 @@ type MovieCardProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 const MovieCard: FC<MovieCardProps> = ({ coverUrl, title, releaseDate, ...rest }: MovieCardProps) => {
-  const handleCardClick = useCallback(() => {
-    // eslint-disable-next-line no-console
-    console.log('clicked');
-  }, []);
-
   return (
-    <Card {...rest} onClick={handleCardClick}>
+    <Card {...rest}>
       <Cover src={coverUrl} />
       <Title>{title}</Title>
       <ReleaseDate>{releaseDate}</ReleaseDate>
