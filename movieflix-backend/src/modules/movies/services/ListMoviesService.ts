@@ -12,9 +12,7 @@ class ListMoviesService {
   }
 
   public async execute({ page, pageLimit }: IListRequest): Promise<Movie[]> {
-    const movies = await this.moviesRepository.list({ page, pageLimit });
-
-    return movies;
+    return await this.moviesRepository.list({ page, pageLimit });
   }
 }
 

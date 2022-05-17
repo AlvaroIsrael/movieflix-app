@@ -5,6 +5,8 @@ import IListRequest from '@modules/movies/dtos/IListRequest';
 import { ObjectID, } from 'typeorm';
 import IEditRequest from '@modules/movies/dtos/IEditRequest';
 
+const ObjectId = require('mongodb').ObjectId;
+
 class FakeMoviesRepository implements IMoviesRepository {
   private movies: Movie[] = [];
 
@@ -23,7 +25,7 @@ class FakeMoviesRepository implements IMoviesRepository {
     const movie = new Movie();
 
     Object.assign(movie, {
-      id: new ObjectID(id),
+      id: new ObjectId(),
       tmdbId: id,
       year,
       genre,
@@ -55,19 +57,19 @@ class FakeMoviesRepository implements IMoviesRepository {
   }
 
   public async findById(id: string): Promise<Movie | undefined> {
-    const movie = this.movies.find(m => m.id === new ObjectID(id));
+    const movie = this.movies.find(m => new ObjectId(m.id).toString() === new ObjectId(id).toString());
 
     return Promise.resolve(movie);
   }
 
   public async delete(id: string): Promise<void> {
-    const movieIndex = this.movies.findIndex(m => m.id === new ObjectID(id));
+    const movieIndex = this.movies.findIndex(m => new ObjectId(m.id).toString() === new ObjectId(id).toString());
 
     this.movies.splice(movieIndex, 1);
   }
 
   public async edit(id: string, movie: IEditRequest): Promise<Movie | undefined> {
-    const movieIndex = this.movies.findIndex(m => m.id === new ObjectID(id));
+    const movieIndex = this.movies.findIndex(m => new ObjectId(m.id).toString() === new ObjectId(id).toString());
 
     Object.assign(this.movies[movieIndex], movie);
 
