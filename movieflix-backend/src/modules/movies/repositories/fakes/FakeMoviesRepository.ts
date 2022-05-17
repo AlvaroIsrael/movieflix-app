@@ -3,6 +3,7 @@ import ICreateMovie from '@modules/movies/dtos/ICreateMovie';
 import IMoviesRepository from '@modules/movies/repositories/IMoviesRepository';
 import IListRequest from '@modules/movies/dtos/IListRequest';
 import { ObjectID, } from 'typeorm';
+import IEditRequest from '@modules/movies/dtos/IEditRequest';
 
 class FakeMoviesRepository implements IMoviesRepository {
   private movies: Movie[] = [];
@@ -63,6 +64,14 @@ class FakeMoviesRepository implements IMoviesRepository {
     const movieIndex = this.movies.findIndex(m => m.id === new ObjectID(id));
 
     this.movies.splice(movieIndex, 1);
+  }
+
+  public async edit(id: string, movie: IEditRequest): Promise<Movie | undefined> {
+    const movieIndex = this.movies.findIndex(m => m.id === new ObjectID(id));
+
+    Object.assign(this.movies[movieIndex], movie);
+
+    return Promise.resolve(this.movies[movieIndex]);
   }
 }
 

@@ -1,7 +1,9 @@
 import { inject, injectable } from 'tsyringe';
 import IMoviesRepository from '@modules/movies/repositories/IMoviesRepository';
 import Movie from '../infra/typeorm/schemas/Movie';
-import IListRequest from '@modules/movies/dtos/IListRequest';
+import IListOneRequest from '@modules/movies/dtos/IListOneRequest';
+import AppError from '@shared/errors/AppError';
+import { StatusCodes } from 'http-status-codes';
 
 @injectable()
 class ListMovieService {
@@ -11,11 +13,16 @@ class ListMovieService {
   ) {
   }
 
-  public async execute({ page, pageLimit }: IListRequest): Promise<Movie[]> {
-    const movies = await this.moviesRepository.list({ page, pageLimit });
+  public async execute({ id }: IListOneRequest): Promise<Movie> {
+    const movie = await this.moviesRepository.findById(id);
 
-    return movies;
+    if (!movie) {
+      throw new AppError('Movie not found', StatusCodes.NOT_FOUND);
+    }
+
+    return movie;
   }
+
 }
 
 export default ListMovieService;

@@ -12,6 +12,12 @@ class MoviesRepository implements IMoviesRepository {
     this.ormRepository = getMongoRepository(Movie, 'mongo');
   }
 
+  public async edit(id: string, movie: ICreateMovie): Promise<Movie | undefined> {
+    await this.ormRepository.update(id, movie);
+
+    return this.ormRepository.findOne(id);
+  }
+
   public async list({ page, pageLimit }: IListRequest): Promise<Movie[]> {
     return await this.ormRepository.find({
       skip: (page - 1) * pageLimit,
