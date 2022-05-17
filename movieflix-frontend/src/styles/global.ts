@@ -16,6 +16,7 @@ export default createGlobalStyle`
     --anthor-green-secondary: #61CE70;
     --anthor-blue-primary: #00294E;
     --anthor-blue-secondary: #6EC1E4;
+    --anthor-red-primary: #E82929;
   }
 
   body {

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Card = styled.div`
   display: grid;
   cursor: pointer;
+  overflow: hidden;
 
   grid-template-columns: 176px;
   grid-template-rows: 264px 32px 24px;
@@ -19,7 +20,7 @@ export const Card = styled.div`
 
 export const Cover = styled.img`
   grid-area: cover;
-  width: 176px;
+  // width: 176px;
   height: 264px;
 
   box-sizing: border-box;
@@ -33,6 +34,7 @@ export const Cover = styled.img`
 
 export const Title = styled.p`
   grid-area: title;
+  white-space: nowrap;
 
   margin-top: 8px;
 
@@ -43,7 +45,7 @@ export const Title = styled.p`
   letter-spacing: 0;
   text-align: left;
 
-  color: var(--anthor-blue-primary);
+  color: var(--anthor-white);
 
   @media screen and (max-width: 360px) {
     font-size: 14px;

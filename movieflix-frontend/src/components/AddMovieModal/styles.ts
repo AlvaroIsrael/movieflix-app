@@ -29,6 +29,13 @@ export const Content = styled.div`
     'header'
     'body'
     'footer';
+
+  img {
+    height: 480px;
+    width: 100px;
+    place-self: center;
+    margin: 0 auto;
+  }
 `;
 
 export const Header = styled.div`
@@ -49,9 +56,15 @@ export const Close = styled.button`
 export const Body = styled.div`
   grid-area: body;
   height: calc(560px - 120px);
-  padding: 20px;
+  padding: 0 20px;
+  display: flex;
 
   div {
+    h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
     input {
       width: 100%;
       height: 40px;
@@ -107,6 +120,15 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    margin-right: 10px;
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -116,6 +138,7 @@ export const Button = styled.button`
   width: fit-content;
   height: 40px;
   cursor: pointer;
+  justify-self: flex-end;
 
   background: #ffffff;
   color: var(--anthor-blue-primary);
