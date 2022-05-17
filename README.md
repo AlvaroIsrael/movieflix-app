@@ -2,14 +2,14 @@
 
 <div align="center">
 
-[![CodeQLCI](https://github.com/AlvaroIsrael/ignews-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AlvaroIsrael/ignews-app/actions/workflows/codeql-analysis.yml)
-[![GitHub license](https://img.shields.io/github/license/AlvaroIsrael/ignews-app)](https://img.shields.io/github/license/AlvaroIsrael/ignews-app)
-[![GitHub repo size](https://img.shields.io/github/repo-size/AlvaroIsrael/ignews-app)](https://img.shields.io/github/repo-size/AlvaroIsrael/ignews-app)
-[![GitHub stars](https://img.shields.io/github/stars/AlvaroIsrael/ignews-app)](https://img.shields.io/github/stars/AlvaroIsrael/ignews-app)
-[![GitHub forks](https://img.shields.io/github/forks/AlvaroIsrael/ignews-app)](https://img.shields.io/github/forks/AlvaroIsrael/ignews-app)
-[![GitHub issues](https://img.shields.io/github/issues/AlvaroIsrael/ignews-app)](https://img.shields.io/github/issues/AlvaroIsrael/ignews-app)
-[![GitHub contributors](https://img.shields.io/github/contributors/AlvaroIsrael/ignews-app)](https://img.shields.io/github/contributors/AlvaroIsrael/ignews-app)
-[![GitHub last commit](https://img.shields.io/github/last-commit/AlvaroIsrael/ignews-app)](https://img.shields.io/github/last-commit/AlvaroIsrael/ignews-app)
+[![GitHub license](https://img.shields.io/github/license/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/license/AlvaroIsrael/movieflix-app)
+[![GitHub repo size](https://img.shields.io/github/repo-size/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/repo-size/AlvaroIsrael/movieflix-app)
+[![GitHub stars](https://img.shields.io/github/stars/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/stars/AlvaroIsrael/movieflix-app)
+[![GitHub forks](https://img.shields.io/github/forks/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/forks/AlvaroIsrael/movieflix-app)
+[![GitHub issues](https://img.shields.io/github/issues/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/issues/AlvaroIsrael/movieflix-app)
+[![GitHub contributors](https://img.shields.io/github/contributors/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/contributors/AlvaroIsrael/movieflix-app)
+[![GitHub last commit](https://img.shields.io/github/last-commit/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/last-commit/AlvaroIsrael/movieflix-app)
+[![GitHub language count ](https://img.shields.io/github/languages/count/AlvaroIsrael/movieflix-app)](https://img.shields.io/github/languages/count/AlvaroIsrael/movieflix-app)
 
 > 📽 A simple typescript crud like movie app!
 
@@ -68,7 +68,8 @@ $ yarn start
 
 ### **Backend**
 
-See [How to Run](/movieflix-backend/README.md#-how-to-run) inside the `movieflix-backend` project folder for more details.
+See [How to Run](/movieflix-backend/README.md#-how-to-run) inside the `movieflix-backend` project folder for more
+details.
 
 ```bash
 # Go into backend folder
@@ -85,9 +86,28 @@ $ yarn dev:server
 
 ### **TMDB Api**
 
-> This application has a integration process to retrieve movies information from [themoviedb api](https://developers.themoviedb.org/3/getting-started/introduction).
-In order for you to run this app you are going to need to request an api token as developer. Without this token the app will be pretty much useless, as all tmdb requests will fail.
-Once you have the token, you should set it in the appropriate env variable into .env file using the `REACT_APP_TMDB_API_KEY` variable in frontend src folder.
+> This application has a integration process to retrieve movies information
+> from [themoviedb api](https://developers.themoviedb.org/3/getting-started/introduction).
+> In order for you to run this app you are going to need to request an api token as developer. Without this token the app
+> will be pretty much useless, as all tmdb requests will fail.
+> Once you have the token, you should set it in the appropriate env variable into .env file using
+> the `REACT_APP_TMDB_API_KEY` variable in frontend src folder.
+
+### **Disclaimer**
+
+> Due to lack of time from my part I could not implement all the features that I wanted to. See below for more details.
+
+- [x] Criar, editar e remover filmes.
+- [x] Listar os detalhes de um filme: diretor, elenco, ano, gênero.
+- [ ] Avaliar filmes: fique a vontade para escolher o sistema de avaliação que quiser (estrelas, joinha, emojis, etc).
+- [ ] Comentar na avaliação de filmes.
+- [x] Testes unitários.
+
+**Opcionais:**
+
+- [x] Seria legal se sua aplicação também fizesse o cadastro e login de usuários.
+- [ ] Teste de integração.
+- [x] Integração com a API do [TheMovieDB](https://www.themoviedb.org/documentation/api).
 
 ## 🤝 Contributing
 

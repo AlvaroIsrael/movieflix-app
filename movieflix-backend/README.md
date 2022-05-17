@@ -137,6 +137,6 @@ Code coverage html report can be found at:
 - [TypeScript](https://www.typescriptlang.org/)
 - [JestJs](https://jestjs.io/)
 
-## 🧾 License
+## 📝 License
 
 This software is under MIT license. See [LICENSE](LICENSE.md) for more details.
