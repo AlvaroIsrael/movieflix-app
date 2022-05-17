@@ -23,6 +23,19 @@ export const Content = styled.div`
     margin-left: 80px;
     height: 80px;
     display: flex;
+
+    button {
+      margin-right: 0 !important;
+      background: transparent;
+      border: 0;
+
+      svg {
+        color: #ffffff;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 `;
 
@@ -34,7 +47,7 @@ export const MenuLink = styled.button<MenuLinkProps>`
   height: 40px;
   cursor: pointer;
 
-  background: #ffffff;
+  background: #ffffff !important;
   color: var(--anthor-blue-primary);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
