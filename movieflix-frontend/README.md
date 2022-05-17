@@ -2,6 +2,7 @@
 
 <div align='center'>
   <a href='#-show-your-support'>Show your support</a> •
+  <a href="#-how-to-run">How To Run</a> •
   <a href='#-contributing'>Contributing</a> •
   <a href='#-technologies-used'>Technologies Used</a> •
   <a href='#-license'>License</a>
@@ -13,6 +14,35 @@ Get in Touch!</a></h4>
 ## ⭐️ Show your support
 
 Hit the ⭐️ button if you like this project!
+
+## 💻 How to Run
+
+### **Install system dependencies**
+
+- Install [Git](https://git-scm.com).
+- Install [Node.js](https://nodejs.org/en/download/), v17.9.0 recommended.
+
+### **Clone**
+
+In your command line:
+
+```bash
+$ git clone https://github.com/AlvaroIsrael/movieflix-app.git
+$ cd movieflix-app
+```
+
+### **Frontend**
+
+```bash
+# Go into project folder
+$ cd movieflix-frontend
+
+# Install dependencies
+$ yarn install
+
+# Run the app
+$ yarn start
+```
 
 ## 🤝 Contributing
 
