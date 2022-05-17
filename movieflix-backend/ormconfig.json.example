@@ -1,0 +1,13 @@
+[
+  {
+    "name": "",
+    "type": "",
+    "host": "",
+    "port": 9999,
+    "database": "",
+    "useUnifiedTopology": true,
+    "entities": [
+      "./src/modules/**/infra/typeorm/schemas/*.ts"
+    ]
+  }
+]
