@@ -1,6 +1,5 @@
 import React, { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import debounce from 'lodash.debounce';
-import { useHistory } from 'react-router-dom';
 import { Overlay, Card, Body, Footer, Close, Content, Header, Button } from './styles';
 import { useTmdb } from '../../hooks/useTmdb';
 import { useMovies } from '../../hooks/useMovies';
@@ -12,7 +11,6 @@ type IModal = {
 };
 
 const Modal: React.FC<IModal> = ({ show = false, close }) => {
-  const history = useHistory();
   const { movie } = useTmdb();
   const { addMovie, error, clearAddMovieError } = useMovies();
 

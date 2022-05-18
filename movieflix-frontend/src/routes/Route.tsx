@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ElementType } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { RouteProps as ReactDomRouteProps, Route as ReactDomRoute, Redirect } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 
