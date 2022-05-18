@@ -1,8 +1,8 @@
 import User from '@modules/users/infra/typeorm/schemas/User';
 import { getMongoRepository, MongoRepository, Not } from 'typeorm';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import ICreateUserDto from '@modules/users/dtos/ICreateUserDto';
-import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO';
+import ICreateUser from '@modules/users/dtos/ICreateUser';
+import IFindAllProviders from '@modules/users/dtos/IFindAllProviders';
 
 class UsersRepository implements IUsersRepository {
   private ormRepository: MongoRepository<User>;
@@ -19,7 +19,7 @@ class UsersRepository implements IUsersRepository {
     return await this.ormRepository.findOne(id);
   }
 
-  public async create({ name, email, password }: ICreateUserDto): Promise<User> {
+  public async create({ name, email, password }: ICreateUser): Promise<User> {
     const user = this.ormRepository.create({ name, email, password });
     await this.ormRepository.save(user);
     return user;
@@ -29,7 +29,7 @@ class UsersRepository implements IUsersRepository {
     return this.ormRepository.save(user);
   }
 
-  public async findAllProviders({ except_user_id }: IFindAllProvidersDTO): Promise<User[]> {
+  public async findAllProviders({ except_user_id }: IFindAllProviders): Promise<User[]> {
     let users: User[];
 
     if (except_user_id) {

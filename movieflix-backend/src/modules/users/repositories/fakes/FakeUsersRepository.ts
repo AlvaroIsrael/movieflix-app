@@ -1,7 +1,7 @@
 import User from '@modules/users/infra/typeorm/schemas/User';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import ICreateUserDto from '@modules/users/dtos/ICreateUserDto';
-import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO';
+import ICreateUser from '@modules/users/dtos/ICreateUser';
+import IFindAllProviders from '@modules/users/dtos/IFindAllProviders';
 
 const ObjectId = require('mongodb').ObjectId;
 
@@ -16,7 +16,7 @@ class UsersRepository implements IUsersRepository {
     return await this.users.find(user => new ObjectId(user.id).toString() === new ObjectId(id).toString());
   }
 
-  public async create({ name, email, password }: ICreateUserDto): Promise<User> {
+  public async create({ name, email, password }: ICreateUser): Promise<User> {
     const user = new User();
 
     Object.assign(user, { id: new ObjectId(), name, email, password });
@@ -26,7 +26,7 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  public async findAllProviders({ except_user_id }: IFindAllProvidersDTO): Promise<User[]> {
+  public async findAllProviders({ except_user_id }: IFindAllProviders): Promise<User[]> {
     let { users } = this;
 
     if (except_user_id) {
